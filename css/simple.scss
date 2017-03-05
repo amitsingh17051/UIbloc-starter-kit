@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("css/normalize.css");
+
+// Variable
+
+$primary-color: #337ab7;
+$succes-color: #5cb85c;
+$info-color: #5bc0de;
+
+body {
+  font-family: roboto;
+  margin:0px 0px 0px 0px;
+  padding:0px 0px 0px 0px;
+}
+
+
+h1,h2,h3,h4,h5,h6,p,img{
+  margin:0px;
+}
+
+.grid-container {
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+  * {
+    box-sizing: border-box;
+  }
+}
+
+row:before, .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+[class*='cl-'] {
+  float: left;
+  min-height: 1px;
+  width: 16.66%;
+  padding: 12px;
+}
+
+[class*='cl-'] {
+  text-align: center;
+}
+
+.cl-1 {
+  width: 16.66%;
+}
+
+.cl-2 {
+  width: 33.33%;
+}
+
+.cl-3 {
+  width: 50%;
+}
+
+.cl-4 {
+  width: 66.664%;
+}
+
+.cl-5 {
+  width: 83.33%;
+}
+
+.cl-6 {
+  width: 100%;
+}
+
+
+// Offset value---
+
+.offset-cl-1 {
+  margin-left: 16.66%;
+}
+.offset-cl-2 {
+  margin-left: 33.33%;
+}
+.offset-cl-center {
+  margin-left: 42.20%;
+}
+
+
+@media all and (max-width: 800px) {
+  .cl-1 {
+    width: 33.33%;
+  }
+  .cl-2 {
+    width: 50%;
+  }
+  .cl-3, .cl-4, .cl-5, .cl-6 {
+    width: 100%;
+  }
+  .row {
+    .cl-2:last-of-type, .cl-5 ~ .cl-1 {
+      width: 100%;
+    }
+  }
+}
+
+@media all and (max-width: 650px) {
+  [class*='cl-'] {
+    text-align: center;
+  }
+  .cl-1, .cl-2, .cl-3, .cl-4, .cl-5, .cl-6 {
+    width: 100%;
+  }
+}
+
+.bt {
+  padding: 10px 35px;
+  display: inline-block;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 300;
+  border-radius: 5px;
+  color: #222222;
+  cursor: pointer;
+  border: 1px solid transparent;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.bt-default {
+  background-color: #fff;
+  border-color: #ccc;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.bt-primary {
+  background-color: $primary-color;
+}
+
+.bt-succes {
+  background-color: $succes-color;
+}
+
+.bt-info {
+  background-color: $info-color;
+}
+
+.bt-med {
+  font-size: 20px;
+  padding: 10px 55px;
+}
+
+.bt-large {
+  font-size: 24px;
+  padding: 10px 70px;
+}
